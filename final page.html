@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Heart's Apology to Zineb</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #e91e63;
+      --secondary-color: #ff4081;
+      --text-color: #333;
+      --background-color: #fff5f8;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(45deg, var(--background-color), #fff);
+      color: var(--text-color);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      color: var(--primary-color);
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 800;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      animation: fadeInDown 1.5s ease;
+    }
+
+    .message {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(233, 30, 99, 0.1);
+      margin: 2rem 0;
+      animation: fadeIn 2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .message::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: var(--text-color);
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+
+    .highlight {
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    .media-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin: 3rem 0;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .video-wrapper {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .video-wrapper:hover {
+      transform: translateY(-5px);
+    }
+
+    video {
+      width: 100%;
+      display: block;
+      border-radius: 20px;
+    }
+
+    .back-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      color: white;
+      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      margin: 2rem auto;
+      display: block;
+      width: fit-content;
+      box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
+    }
+
+    .back-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(233, 30, 99, 0.4);
+    }
+
+    .floating-hearts {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+      50% { opacity: 0.6; }
+      100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 1.5rem;
+      animation: float 4s linear infinite;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 1.3rem;
+      color: var(--secondary-color);
+      text-align: center;
+      margin: 2rem 0;
+      padding: 1rem;
+      border-left: 4px solid var(--primary-color);
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 0 20px 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="floating-hearts"></div>
+  <div class="container">
+    <h1 class="animate__animated animate__fadeInDown">My Dearest Douaae ❤️</h1>
+    
+    <div class="message animate__animated animate__fadeIn">
+      <p>To the most wonderful person in my world,</p>
+      <p>I know words alone cannot undo what has been done, but I hope they can be the first step towards healing. My heart aches knowing I've caused you pain, and I want you to know that your happiness means everything to me.</p>
+      <div class="quote">
+        "Sometimes it takes losing something to realize its true value. I promise to treasure every moment with you from now on."
+      </div>
+    </div>
+
+    <div class="media-container">
+      <div class="video-wrapper">
+        <video controls>
+          <source src="media/apology.mp4" type="video/mp4">
+          Your browser doesn't support this video format.
+        </video>
+      </div>
+      
+      <p class="highlight">A special message from my heart to yours...</p>
+      
+      <div class="video-wrapper">
+        <video controls>
+          <source src="media/apology2.mp4" type="video/mp4">
+          Your browser doesn't support this video format.
+        </video>
+      </div>
+    </div>
+
+    <div class="message animate__animated animate__fadeInUp">
+      <p>Douaae, you bring light to my darkest days and joy to my heart. I promise to be better, to listen more, to understand deeper, and to love stronger.</p>
+      <p>Your forgiveness would mean the world to me. ❤️</p>
+    </div>
+
+    <a href="index.html" class="back-button">Return to Our Special Place</a>
+  </div>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.innerHTML = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+      heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+      document.querySelector('.floating-hearts').appendChild(heart);
+
+      heart.addEventListener('animationend', () => heart.remove());
+    }
+
+    setInterval(createHeart, 300);
+
+    // Add smooth scroll behavior
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
